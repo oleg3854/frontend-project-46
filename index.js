@@ -8,11 +8,10 @@ const readFile = (filepath) => {
 }
 
 const gendiff = (filepath1, filepath2) => {
-  const [path1, path2] = [, path.resolve(process.cwd(), filepath2)];
   const data1 = readFile(filepath1);
   const data2 = readFile(filepath2);
 
-  const keys = _.union(_.keys(data1), _.keys(data2));
+  const keys = (_.union(_.keys(data1), _.keys(data2))).sort();
   const diffObj = keys.map((key) => {
     if (_.has(data1, key) && !_.has(data2, key)) {
       return `  - ${key}: ${data1[key]}`;
