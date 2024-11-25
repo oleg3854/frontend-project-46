@@ -4,7 +4,9 @@
   "description": "[![Actions Status](https://github.com/oleg3854/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/oleg3854/frontend-project-46/actions)",
   "main": "index.js",
   "type": "module",
-  "bin": "gendiff.js",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +15,17 @@
   "dependencies": {
     "commander": "^12.1.0",
     "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.0.0",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "globals": "^15.12.0"
   }
 }
